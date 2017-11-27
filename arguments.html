@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Default arguments</h2>
+    </div>
+<script>
+// classic way:
+//  bill + tax rate and tip rate
+function calculateBill(total, tax, tip){
+    // if tip or tax is undefined take these values
+    tax = tax || 0.13;
+    tip = tip || 0.16;
+
+    return total + (total * tax) + (total * tip);
+}
+const totalBill = calculateBill(100);
+console.log("totalBill:", totalBill);
+
+// new es6 way:
+function calculateBilles6(total, tax = 0.13, tip = 0.15) {
+    return total + (total * tax) + (total * tip);
+}
+
+// can pass 'undefined' and it will replaced by '0.13' value
+const totalBillEs6 = calculateBilles6(100 , undefined, 0.14);
+
+console.log("totalBillEs6: ", totalBillEs6);
+
+
+</script>
+</body>
+</html>

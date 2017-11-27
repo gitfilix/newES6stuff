@@ -14,3 +14,7 @@ arrow functions
     const fullNames3 = names.map(name => `${name} adamski`);
 - arrow function inheritance 'this' from parent functions
 - use regular functions if you want to refer this to a dom-node
+- when NOT to use it:
+    - if you really need THIS
+    - when you neeed a method to miend to an object
+    
