@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Data structures in ES6</h2>
+    </div>
+<script>
+    var width = 100;
+    console.log(width);
+
+    const key = 'abcdrs3';
+
+    var age = 100;
+    if(age > 12) {
+        // let: blockscope - cant access from outside
+        // var dogYears - global accessible
+        let dogYears = age * 7;
+        console.log(`you are ${dogYears} dog years old!`);
+    }
+
+    let points = 50;
+    let winner = false;
+
+    if(points > 40) {
+        console.log('it ran');
+        // winner is ANTOTHER variable with the same name.
+        let winner = true;
+        console.log('winner: ',winner);
+    }
+
+</script>
+</body>
+</html>

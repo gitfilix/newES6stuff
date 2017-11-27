@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff -arrow => </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Data structures in ES6</h2>
+        <h3>arrow function </h3>
+    </div>
+<script>
+//backticks `` `` (shift- ^)
+    const names = ['flix', 'felix', 'lucky', 'filiks'];
+    // classic
+    const fullNames = names.map(function (name) {
+        return `${name} adam`;
+    });
+
+    const fullNames2 = names.map((name) => {
+        return `${name} adam`;
+    });
+
+    // implicit return - no {}, no return
+    const fullNames3 = names.map(name => `${name} adamski`);
+
+    console.log("fullNames3: ", fullNames3);
+
+    const race = '100m Dash';
+    const winners = ['Singa Song', 'Imthe Bos', 'Figgdi Duarsch', 'imgur bicture'];
+    const loosers = ['Short Loin', 'Tenderloin Tendy', 'Sirloin Sou', 'Round Robbin'];
+
+    // map winners to i
+    const win = winners.map((winner, i) => ({name: winner, race: race, place: i + 1}));
+    // map loosers in reverse to i
+    const lastfew = loosers.reverse().map((looser, i) => ({name: looser, race: race, place: i + 1}));
+
+    // objects log nicer with console.table
+    console.table(win);
+    console.table(lastfew);
+
+
+    // filter out all over 65
+    const ages = [23, 15, 64, 87, 68, 12, 123, 42, 35, 29, 97, 24, 45, 166];
+    const over65 = ages.filter(age => (age >= 65));
+
+    console.log("over65 is: ", over65);
+
+</script>
+</body>
+</html>

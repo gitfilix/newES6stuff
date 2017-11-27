@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <style>
+        .wrap {
+          min-height: 100vh;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          font-family: sans-serif;
+          font-weight: 100;
+          color: #fff;
+        }
+        .box {
+          background:black url(https://unsplash.it/1500/1500?image=560&blur=0.5) center fixed no-repeat;
+          width:50px;
+          height:50px;
+          padding:50px;
+          transition: width 0.2s, height 0.6s;
+          position: relative;
+        }
+        .box.opening {
+          width:500px;
+          height:500px;
+        }
+        .box h2 {
+          position: absolute;
+          width:100%;
+          font-size: 100px;
+          transform:translateX(-200%);
+          transition: all 0.5s;
+          top:0;
+        }
+        .box p {
+          position: absolute;
+          width:100%;
+          transform:translateX(200%);
+          transition: all 0.5s;
+          bottom:0;
+        }
+        .box.open > * {
+          transform:translateX(0%);
+        }
+    </style>
+    <div class="wrapper">
+        <h1>arrow functions in ES6</h1>
+    </div>
+
+    <div class="wrap">
+        <div class="box">
+            <h2>filix adm</h2>
+            <p class="social">@fiilix.ch</p>
+        </div>
+    </div>
+
+<script>
+    const box = document.querySelector('.box');
+    // regular function refers to this into the function
+    box.addEventListener('click', function() {
+        let first = 'opening';
+        let second = 'open';
+
+        // switch fist and second if classlist contains first
+        if(this.classList.contains(first)){
+            [first, second] = [second, first]
+        }
+
+        // this: box
+        this.classList.toggle(first);
+        // this: bound to box through inheritance
+        setTimeout(() => {
+            console.log(this);
+            this.classList.toggle(second);
+        }, 500);
+    });
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

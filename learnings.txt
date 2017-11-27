@@ -1,0 +1,16 @@
+const vs. let
+--------------
+- use const by default
+- use let when rebinding / mutating is needed.
+- same named let-vars in another scope are different variables!
+
+
+
+arrow functions
+----------------
+- arriôws are always anonymous functions
+- only on parameter, no bracket is needed
+- implicit return (no {}, & 'return' word) on onliners:
+    const fullNames3 = names.map(name => `${name} adamski`);
+- arrow function inheritance 'this' from parent functions
+- use regular functions if you want to refer this to a dom-node
