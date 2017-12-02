@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff- I promise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Promises in ES6</h2>
+    </div>
+<script>
+// Promise constructor
+const p = new Promise((resolve, reject) => {
+    // timeout
+    setTimeout(() => {
+        // resolve('felix ist sooo cool');
+        reject(Error('filix is an ass'));
+    }, 1000);
+});
+
+p
+    .then(data => {
+        console.log('p data: ', data);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
+
+
+//const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+
+
+</script>
+</body>
+</html>
