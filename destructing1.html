@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff- I destruct</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Destructuring Objects in ES6</h2>
+    </div>
+<script>
+
+//my object
+const person = {
+    first: 'felix',
+    last: 'adam',
+    country: 'swissiland',
+    city: 'bern',
+    links: {
+        social: {
+            twitter: 'http:twitter.com/filix',
+            facebook: 'https:facebook.com/filix'
+        },
+        web: {
+            page: 'www.webkanal.ch'
+        }
+    }
+};
+
+// destructed obj and renamed keys as you destruct
+const { twitter:tweet, facebook:fbid } = person.links.social;
+
+console.log("destructed object", person.links.social);
+console.log("tweet: ", tweet);
+
+//ex 2
+const settings = { width: 300, color: 'red' }
+// we want to add 2 more properties height and fontsize
+// we can add on the fly
+const { width =159, height= 70, color='blue', fontSize=12} = settings;
+
+console.log("settings", settings);
+
+</script>
+</body>
+</html>
