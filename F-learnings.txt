@@ -1,2 +1,16 @@
 Fiilix Learnings by heart 2018
 -------------------------------
+
+Sets:
+
+are lists
+
+
+const people = new Set();
+
+people.add()
+people.size()
+people.delete("Fiilix")
+people.clear() // clear all
+people.values() //
+people.has("Kait")

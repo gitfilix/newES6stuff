@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff- I Set up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>SETs in ES6</h2>
+        <h3>introducing sets</h3>
+
+    </div>
+<script>
+  const people = new Set();
+  people.add("Fiilix");
+  people.add("Snickers");
+  people.add("Snuffels");
+  people.add("Kait Surfix");
+
+  // for-of loop
+  for (const person of people) {
+    console.log("person: ", person);
+  }
+
+  // convert a Array to a new Set of dogs
+  const dogs = ['Ayra', 'Chewy', 'Penny'];
+  const dogSet = new Set(dogs);
+
+
+</script>
+</body>
+</html>
