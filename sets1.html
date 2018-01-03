@@ -23,10 +23,30 @@
   for (const person of people) {
     console.log("person: ", person);
   }
-
   // convert a Array to a new Set of dogs
   const dogs = ['Ayra', 'Chewy', 'Penny'];
   const dogSet = new Set(dogs);
+
+  // ----------- //
+  const brunch = new Set();
+  // as people comming
+  brunch.add("felix");
+  brunch.add("karin");
+  brunch.add("Belinda");
+
+  // ready to Open
+  const line = brunch.values();
+  console.log(line.next().value); // felix
+  console.log(line.next().value); // karin
+  console.log(line.next().value); // Belinda
+
+  // Re-fill the list after
+  brunch.add("Heather");
+  brunch.add("Peter")
+
+  console.log(line.next().value); // Heather
+  console.log(line.next().value); // peter
+
 
 
 </script>

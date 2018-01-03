@@ -3,7 +3,10 @@ Fiilix Learnings by heart 2018
 
 Sets:
 
-are lists
+- are lists, that could contain all datatypes
+
+WeakSet;
+- can only can contain objects
 
 
 const people = new Set();
