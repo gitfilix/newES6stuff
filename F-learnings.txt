@@ -28,3 +28,5 @@ js almost everything is running asynchronous
 (exeption: alert() )
 
 await is only valid in a async function
+
+async function go() {}
