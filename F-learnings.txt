@@ -17,3 +17,14 @@ people.delete("Fiilix")
 people.clear() // clear all
 people.values() //
 people.has("Kait")
+
+
+
+
+FlowControl
+------------
+
+js almost everything is running asynchronous
+(exeption: alert() )
+
+await is only valid in a async function
