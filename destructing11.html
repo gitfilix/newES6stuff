@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff- I destruct</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Destructuring Objects in ES6</h2>
+    </div>
+<script>
+
+//my object
+const person = {
+    first: 'fiilix',
+    last: 'adam',
+    country: 'swissiland',
+    city: 'bern',
+    links: {
+        social: {
+            twitter: 'http:twitter.com/filix',
+            facebook: 'https:facebook.com/filix'
+        },
+        web: {
+            page: 'www.webkanal.ch',
+            contact: 'fiilix@webkanal.ch'
+        }
+    }
+};
+
+const { twitter:tweet, facebook:fb } = person.links.social;
+console.log("destruct ", person.links.social);
+
+const settings = {width: 300, color: 'black'}
+const { width = 100,
+        height = 100,
+        color = 'green',
+        fontSize ='25px'} = settings;
+
+
+console.log("settings ",settings.color);
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

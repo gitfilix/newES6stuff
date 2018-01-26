@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff- I destruct</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Destructuring [] in ES6</h2>
+    </div>
+<script>
+
+//my unstructered sting
+const team = ['Filix', 'Harry', 'Luc', 'Larry', 'Assam'];
+
+// using the rest operator ...
+const [captain, stormer, ...players] = team;
+
+console.log("team only players: ", players);
+
+
+</script>
+</body>
+</html>

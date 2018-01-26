@@ -36,3 +36,13 @@ function calculateBill(total, tax, tip){
 function calculateBilles6(total, tax = 0.13, tip = 0.15) {
     return total + (total * tax) + (total * tip);
 }
+
+
+destructuring
+--------------
+ -why?
+ - put a lot of objects in one vars
+ - rename keys them as you destruct them {twitter:tweet}
+ - add fallback keys values
+ -  destruct the return value (only thes you want)
+ - pass parameter as object and the order is irrelevant

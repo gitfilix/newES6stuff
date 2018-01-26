@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff- I destruct</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Destructuring  in ES6</h2>
+    </div>
+<script>
+function convertCurrency(amount) {
+    const converted = {
+        USD: amount * 0.76,
+        GPB: amount * 0.44,
+        AUD: amount * 0.499,
+        SUI: amount * 1.23
+    };
+    return converted;
+}
+
+const hundo = convertCurrency(100);
+console.log("hundo:", hundo);
+
+const { SUI, USD, GPB} = convertCurrency(100);
+console.log("every currency each", SUI, USD, GPB );
+// ------------------------------//
+
+
+// pass parameters as OBJECT
+function totalCosts({total, tip =0.15, mwst = 0.08} = {}) {
+    return total + (tip * total) + (mwst * total);
+}
+
+
+const bill  = totalCosts({ tip: 0.24, total: 100});
+console.log("you pay:", bill);
+
+
+
+</script>
+</body>
+</html>
