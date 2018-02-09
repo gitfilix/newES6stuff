@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff- I backtick</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Template Strings with backticks</h2
+            <p>
+                dog eat dog
+            </p>
+            <div class="dynamic"></div>
+
+            <br />
+            <br />
+            <div>
+                <h2>All my dogs & their age:</h2>
+                <div class="doglisting"></div>
+            </div>
+    </div>
+
+
+<script>
+const name= 'Skarabaeus';
+const age= 2;
+const sentence = `my dog ${name} is ${age *7}  years old in dogyears.`;
+
+console.log("sentence", sentence);
+/*----------------------------------------------------*/
+const person = {
+    name: 'filikx',
+    job: 'web developer',
+    city: 'bärn',
+    bio: 'just another freak that loves the internetty things in life.'
+};
+
+const markup = `
+    <div class="person">
+        <h3>
+            Name: ${person.name}
+            <span class="job">Job: ${person.job}</span>
+        </h3>
+        <p class="biography">
+        biography: ${person.bio}
+        </p>
+        <div>
+            City: ${person.city}
+        </div>
+    </div>
+`;
+
+// direct:
+// document.body.innerHTML = markup;
+
+// elegant way
+var nodeelement = document.querySelector(".dynamic");
+// assign markup to div .dynamic
+nodeelement.innerHTML = markup;
+
+/*----------------------------------------------------*/
+
+
+const dogs = [
+    {name: 'Snickers', age: 2, color: 'brown'},
+    {name: 'Wuffy', age: 4, color: 'coniac'},
+    {name: 'Emil', age: 6, color: 'black'},
+    {name: 'Moritz L.', age: 7, color: 'white with brown dots'},
+];
+
+console.log("hunde:", dogs);
+
+const listdogs = `
+    <ul class="dogs">
+        ${dogs.map(dog => `<li>
+                ${dog.name} is ${dog.age} years old.
+                My furr is: ${dog.color}.
+            </li>`).join('')}
+
+    </ul>
+
+`;
+
+console.log("listdogs", listdogs);
+
+// select place for output
+var place = document.querySelector(".doglisting");
+place.innerHTML = listdogs;
+
+</script>
+</body>
+</html>

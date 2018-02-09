@@ -46,3 +46,13 @@ destructuring
  - add fallback keys values
  -  destruct the return value (only thes you want)
  - pass parameter as object and the order is irrelevant
+
+
+TemplateStrings
+----------------
+
+backticks: ``
+- interpreation of js-objects between` with ${this.name}
+- create multi-line Strings
+- create markup-templates in TemplateStrings & bring functionality inside.
+- looping & maping inside TemplateStrings possible.
