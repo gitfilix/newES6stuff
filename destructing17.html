@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Data destruction ES6</h2>
+        <h3>part 3 swap content in another array</h3>
+    </div>
+<script>
+    let inTheHouse = 'canon, fuji, lytro';
+    let outDoor = 'nikon, kodak';
+
+    console.log(inTheHouse, outDoor);
+    //swap them with destructing
+    [inTheHouse, outDoor] = [outDoor, inTheHouse];
+
+    console.log(inTheHouse, outDoor);
+
+</script>
+</body>
+</html>

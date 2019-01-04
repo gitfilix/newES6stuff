@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <script>
+    const cuts = ['chuck', 'berry', 'joan', 'coolio', 'perl'];
+
+    // traditional
+    for (let i = 1; i < cuts.length; i++) {
+        console.log(cuts[i]);
+    }
+
+    // traditional forEach
+    cuts.forEach((cut) => {
+        console.log("forEach:", cut);
+    });
+
+    // for loop with break
+    for (const cut of cuts) {
+        console.log("forLoop:", cut);
+        if(cut === 'joan') {
+            console.log("that's it -reached joan");
+            break;
+        }
+    }
+
+
+    </script>
+    <div class="wrapper">
+        <h2>The For loop ES6</h2>
+        <h3>looop</h3>
+
+    </div>
+</body>
+</html>

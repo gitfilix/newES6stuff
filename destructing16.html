@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Data destruction ES6</h2>
+        <h3>part 2 arrays</h3>
+    </div>
+<script>
+    const details = ['fiilix adam', 213, 'felix@fdomain.ch'];
+    // const name = details[0];
+    // pull from array
+    const [name, id, email] = details;
+
+    // recieve a sting
+    const data = 'Basketball, Sports, 44325, 32';
+    // convert in a array with split
+    const [itemName, category, sku, inventory] = data.split(',');
+
+    // take some, leave the ...REST to a group
+    const team = ['filix', 'harry', 'sarah', 'huck', 'chuck', 'berry'];
+    const [captain, assistant, ...players] = team;
+    console.log("players", players);
+
+
+</script>
+</body>
+</html>

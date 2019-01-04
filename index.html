@@ -8,44 +8,19 @@
 </head>
 <body>
     <div class="wrapper">
-        <h2>Data structures in ES6</h2>
-        <h3>part 1</h3>
+        <h2>The For loop ES6</h2>
+        <h3>looop</h3>
     </div>
-<script>
-    //my object
-    const person = {
-        first: 'felix',
-        last: 'adam',
-        country: 'swissiland',
-        city: 'bern',
-        links: {
-            social: {
-                twitter: 'http:twitter.com/filix',
-                facebook: 'https:facebook.com/filix'
-            },
-            web: {
-                page: 'www.webkanal.ch'
-            }
-        }
-    };
+    <script>
+    const cuts = ['chuck', 'berry', 'joan', 'coolio', 'perl'];
 
-    // destructing syntax: gimme first and last value from person obj
-    const { first, last } = person;
-    console.log("last:", last);
-    // smaller objects: nested data and rename keys -variables on the fly
-    const { twitter:twiitlink, facebook:fblink } = person.links.social;
-    console.log("twiitlink:", twiitlink);
-
-    // example: width, font-size
-    const settings = { width: 300, color: 'green'};
-    // whats undefined: gets defined, whats in the object stays as value
-    const { width = 100, height = 232, color = 'blue' , fontSize = '2.3rem'} = settings;
+    // return arrays entries iterator and destruct
+    for (const [i, cut] of cuts.entries()) {
+        console.log(`${cut} is the ${i + 1} item`);
+    }
 
 
-    // example 2:
-    
-    const { s: south = 400, n: north = 233, west = undefined} = {s: 200, west: 344, n: 544}
 
-</script>
+    </script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Data destruction ES6</h2>
+        <h3>part 4 multiples returns</h3>
+    </div>
+<script>
+    function convertCurrency(amount) {
+        const converted = {
+            USD: amount * 1.03,
+            GPB: amount * 1.03,
+            SFR: amount * 1.23,
+            EUR: amount * 0.88,
+            YEN: amount * 0.38,
+            BOL: amount * 42.77
+        };
+        return converted;
+    }
+
+const hunni = convertCurrency(100);
+console.log("1 hunni is:", hunni);
+
+const chDoller = convertCurrency(100).SFR;
+// console.log("chDoller:",chDoller);
+
+// destruct return object in any order of called function
+const {EUR, GPB, SFR, USD, YEN, BOL} = convertCurrency(100);
+console.log("usd:", USD, "SFR:", SFR);
+
+</script>
+</body>
+</html>

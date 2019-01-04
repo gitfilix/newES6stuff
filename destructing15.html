@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Data structures in ES6</h2>
+        <h3>part 1</h3>
+    </div>
+<script>
+    //my object
+    const person = {
+        first: 'felix',
+        last: 'adam',
+        country: 'swissiland',
+        city: 'bern',
+        links: {
+            social: {
+                twitter: 'http:twitter.com/filix',
+                facebook: 'https:facebook.com/filix'
+            },
+            web: {
+                page: 'www.webkanal.ch'
+            }
+        }
+    };
+
+    // destructing syntax: gimme first and last value from person obj
+    const { first, last } = person;
+    console.log("last:", last);
+    // smaller objects: nested data and rename keys -variables on the fly
+    const { twitter:twiitlink, facebook:fblink } = person.links.social;
+    console.log("twiitlink:", twiitlink);
+
+    // example: width, font-size
+    const settings = { width: 300, color: 'green'};
+    // whats undefined: gets defined, whats in the object stays as value
+    const { width = 100, height = 232, color = 'blue' , fontSize = '2.3rem'} = settings;
+
+
+    // example 2:
+    
+    const { s: south = 400, n: north = 233, west = undefined} = {s: 200, west: 344, n: 544}
+
+</script>
+</body>
+</html>
