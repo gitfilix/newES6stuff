@@ -9,30 +9,42 @@
 <body>
     <div class="wrapper">
         <h2>Data structures in ES6</h2>
+        <h3>part 1</h3>
     </div>
 <script>
-    var width = 100;
-    console.log(width);
+    //my object
+    const person = {
+        first: 'felix',
+        last: 'adam',
+        country: 'swissiland',
+        city: 'bern',
+        links: {
+            social: {
+                twitter: 'http:twitter.com/filix',
+                facebook: 'https:facebook.com/filix'
+            },
+            web: {
+                page: 'www.webkanal.ch'
+            }
+        }
+    };
 
-    const key = 'abcdrs3';
+    // destructing syntax: gimme first and last value from person obj
+    const { first, last } = person;
+    console.log("last:", last);
+    // smaller objects: nested data and rename keys -variables on the fly
+    const { twitter:twiitlink, facebook:fblink } = person.links.social;
+    console.log("twiitlink:", twiitlink);
 
-    var age = 100;
-    if(age > 12) {
-        // let: blockscope - cant access from outside
-        // var dogYears - global accessible
-        let dogYears = age * 7;
-        console.log(`you are ${dogYears} dog years old!`);
-    }
+    // example: width, font-size
+    const settings = { width: 300, color: 'green'};
+    // whats undefined: gets defined, whats in the object stays as value
+    const { width = 100, height = 232, color = 'blue' , fontSize = '2.3rem'} = settings;
 
-    let points = 50;
-    let winner = false;
 
-    if(points > 40) {
-        console.log('it ran');
-        // winner is ANTOTHER variable with the same name.
-        let winner = true;
-        console.log('winner: ',winner);
-    }
+    // example 2:
+    
+    const { s: south = 400, n: north = 233, west = undefined} = {s: 200, west: 344, n: 544}
 
 </script>
 </body>

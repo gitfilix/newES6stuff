@@ -8,8 +8,8 @@ const vs. let
 
 arrow functions
 ----------------
-- arriôws are always anonymous functions
-- only on parameter, no bracket is needed
+- arrows are always anonymous functions
+- only 1 parameter, no bracket is needed
 - implicit return (no {}, & 'return' word) on onliners:
     const fullNames3 = names.map(name => `${name} adamski`);
 - arrow function inheritance 'this' from parent functions
