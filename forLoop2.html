@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>es 6 new stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="/index.css" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <h2>The For-of- loop ES6</h2>
+        <h3>looop</h3>
+    </div>
+    <script>
+    const cuts = ['chuck', 'berry', 'joan', 'coolio', 'perl'];
+    // ex 1
+    // for-of loop return arrays entries iterator and destruct
+    for (const [i, cut] of cuts.entries()) {
+        console.log(`${cut} is the ${i + 1} item`);
+    }
+
+    // ex 2
+    function addUpNumbers() {
+        console.log(arguments);
+        let total = 0;
+        //
+        for (num of arguments) {
+            total += num;
+        }
+        console.log("addUpNumbers total:", total);
+        return total;
+    }
+
+    addUpNumbers(23,32,51,12,32,2,89,32);
+
+
+    </script>
+</body>
+</html>
