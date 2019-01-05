@@ -40,7 +40,7 @@ function calculateBilles6(total, tax = 0.13, tip = 0.15) {
 
 destructuring
 --------------
- -why?
+ - why?
  - put a lot of objects in one vars
  - rename keys them as you destruct them {twitter:tweet}
  - add fallback keys values
@@ -52,7 +52,20 @@ TemplateStrings
 ----------------
 
 backticks: ``
-- interpreation of js-objects between` with ${this.name}
+- interpretation of js-objects between` with ${this.name}
 - create multi-line Strings
 - create markup-templates in TemplateStrings & bring functionality inside.
 - looping & maping inside TemplateStrings possible.
+
+
+spread operator
+----------------
+
+...var: Spread add every single item into an new array
+
+
+good to know
+-------------
+
+can log arguments passed to a function by logging (reseved word):
+    console.log(arguments);
